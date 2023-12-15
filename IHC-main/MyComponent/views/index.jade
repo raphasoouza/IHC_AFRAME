@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  a-scene(cursor='rayOrigin: mouse' raycaster="objects: .raycastable" inspector-plugin-recast color='red')
+    a-camera(position='150 10 -200' rotation='-1 103 -350')
+      a-cursor()
+    a-entity(text="value: Floresta; color: #000000; width: 5; anchor:align" position="32 -5 -360" scale="1.5 1.5 1.5" rotation='0 0 0')
+    a-assets-iten(id='1' src='models/scene.gltf')
+    a-entity(gltf-model='#1')
+
+    a-sky(radius="10000" src="imagem/fundo.jpg")
+
+    a-assets(id="sol" src='../audios/sol.mp3' preload="auto")
+    a-entity(id="s" sound="src: #sol; volume:100" on:click)
+    a-sphere(id="so" radius='90' visible='false' mycomponent)
+
+    a-assets(id="mercurio" src='../audios/mercurio.mp3' preload="auto")
+    a-entity(id="m" sound="src: #mercurio; volume:200" on:click)
+    a-sphere(id="mer" radius='10' visible='false' position='0 0 -100' mycomponent)
+
+    a-assets(id="venus" src='../audios/venus.mp3' preload="auto")
+    a-entity(id="v" sound="src: #venus; volume:200" on:click)
+    a-sphere(id="ve" radius='20' visible='false' position='0 0 -150' mycomponent)
+
+
+    a-assets(id="terra" src='../audios/terra.mp3' preload="auto")
+    a-entity(id="t" sound="src: #terra; volume:200" on:click)
+    a-sphere(id="te" radius='40' visible='false' position='0 0 -200' mycomponent)
+
+    a-assets(id="marte" src='../audios/marte.mp3' preload="auto")
+    a-entity(id="mar" sound="src: #marte; volume:200" on:click)
+    a-sphere(id="ma" radius='20' visible='false' position='0 0 -270' mycomponent)
+
+    a-assets(id="jupiter" src='../audios/jupiter.mp3' preload="auto")
+    a-entity(id="j" sound="src: #jupiter; volume:200" on:click)
+    a-sphere(id="ju" radius='45' visible='false' position='0 0 -355' mycomponent)
+
+    script(src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js")
+
+
+
+
+
